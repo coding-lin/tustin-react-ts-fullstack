@@ -1,0 +1,18 @@
+{
+  "name": "tustin-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-router": "^12.0.0",
+    "koa2-cors": "^2.0.6",
+    "nodemon": "^2.0.19"
+  }
+}
