@@ -138,7 +138,7 @@ Error generating stack: `+o.message+`
       color: yellow;
     }
     i {
-      font-size: 36px;
+      font-size: 32px;
     }
     span {
       font-size: 14px;
