@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { GlobalStyle } from './style'
+import Footer from '@/components/Footer'
 import Routes from '@/routes'
 import './App.css'
 
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Routes />
+      <Footer />
     </div>
   )
 }
