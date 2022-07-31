@@ -9,7 +9,7 @@ export const FooterWrapper = styled.div`
   bottom: 0;
   z-index: 999;
   background-color: #fff;
-  border-top: 1px solid rgba(50, 50, 50, 0.1);
+  border-top: 1px solid rgba(50, 50, 50, 0.01);
   display: flex;
   a {
     flex: 1;
