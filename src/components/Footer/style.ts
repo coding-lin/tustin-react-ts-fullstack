@@ -1,15 +1,16 @@
 import styled from 'styled-components'
+import { px2rem } from "@/assets/global-style"
 
 export const FooterWrapper = styled.div`
   width: 100%;
-  height: 60px;
+  height: ${px2rem(60)};
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 999;
   background-color: #fff;
-  border-top: 1px solid rgba(50, 50, 50, 0.01);
+  border-top: ${px2rem(1)} solid rgba(50, 50, 50, 0.01);
   display: flex;
   a {
     flex: 1;
@@ -22,10 +23,10 @@ export const FooterWrapper = styled.div`
       color: yellow;
     }
     i {
-      font-size: 32px;
+      font-size: ${px2rem(32)};
     }
     span {
-      font-size: 14px;
+      font-size: ${px2rem(14)};
       color: #000;
     }
   }
