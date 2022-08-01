@@ -39,6 +39,16 @@ export const HeaderWrapper = styled.div`
       color: gray;
     }
   }
+  >div:first-child:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: ${px2rem(1)};
+    height: ${px2rem(156)};
+    top: ${px2rem(20)};
+    left: 50%;
+    background-color: rgba(50, 50, 50, 0.1);
+  }
 `
 
 export const QRWrapper = styled.div`
@@ -72,7 +82,7 @@ export const QRWrapper = styled.div`
     text-align: left;
     p {
       padding: ${px2rem(4)};
-      font-weight: ${px2rem(18)};
+      font-size: ${px2rem(18)};
       font-weight: 600;
     }
     span {
