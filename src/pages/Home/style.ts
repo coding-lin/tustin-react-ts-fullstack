@@ -98,7 +98,7 @@ export const QRWrapper = styled.div`
     text-align: center;
     img {
       margin: 0 auto;
-      width: ${px2rem(52)};
+      width: ${px2rem(54)};
       height: ${px2rem(52)};
     }
   }
