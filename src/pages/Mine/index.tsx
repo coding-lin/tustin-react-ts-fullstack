@@ -71,7 +71,7 @@ const Mine = () => {
           <i className='iconfont icon-xiangyoujiantou'></i>
         </li>
         <li>
-          <i className='iconfont icon-gerenzhongxin'></i>
+          <i className='iconfont icon-user'></i>
           <span>会员资料</span>
           <i className='iconfont icon-xiangyoujiantou'></i>
         </li>
