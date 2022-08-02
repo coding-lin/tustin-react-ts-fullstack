@@ -20,7 +20,7 @@ export const FooterWrapper = styled.div`
     justify-content: space-around;
     color: #000;
     &.active {
-      color: yellow;
+      color: orange;
     }
     i {
       font-size: ${px2rem(32)};
