@@ -153,6 +153,7 @@ export const List = styled.ul`
     }
     >i:last-child {
       position: absolute;
+      font-size: ${px2rem(15)};
       right: ${px2rem(10)};
       color: gray;
       font-weight: bold;
