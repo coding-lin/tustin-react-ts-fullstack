@@ -10,12 +10,13 @@ export const Wrapper = styled.div`
 export const HeaderWrapper = styled.div`
   position: relative;
   width: 90%;
-  margin-top: ${px2rem(180)};
+  margin-top: ${px2rem(-30)};
   margin-left: auto;
   margin-right: auto;
   height: ${px2rem(196)};
   border-radius: ${px2rem(10)};
   background: #fff;
+  z-index: 2;
   display: flex;
   div {
     width: 50%;

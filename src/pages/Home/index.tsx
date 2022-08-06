@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { rootState } from '@/store'
-import { Dispatch } from 'redux'
+import { getBannersList } from './store/actionCreators'
 import Slider from '@/components/slider'
 import HallFood from '@/assets/images/hall-food.png'
 import Pack from '@/assets/images/pack.png'
@@ -13,22 +13,23 @@ import Choujiang from '@/assets/images/choujiang.png'
 import ShoppingMall from '@/assets/images/shopping-mall.png'
 import { Wrapper, HeaderWrapper, QRWrapper, Container, ImgWrapper } from './style'
 
-// interface HomeProps {
-//   bannerList: any[];
-//   getBannerDataDispatch: (id:number) => void;
-// }
+interface HomeProps {
+  bannersList: any[];
+  getBannerDataDispatch: () => void;
+}
 
-const Home = () => {
-  // const { bannerList } = props
-  // const { getBannerDataDispatch } = props
+const Home:React.FC<HomeProps> = (props) => {
+  const { bannersList } = props
+  console.log(bannersList)
+  const { getBannerDataDispatch } = props
 
-  // useEffect(() => {
-  //   getBannerDataDispatch(1)
-  // }, [])
+  useEffect(() => {
+    getBannerDataDispatch()
+  }, [])
 
   return (
     <Wrapper>
-      {/* <Slider bannerList={bannerList}></Slider> */}
+      <Slider bannersList={bannersList}></Slider>
       <HeaderWrapper>
         <div>
           <img src={HallFood} />
@@ -74,15 +75,14 @@ const Home = () => {
   )
 }
 
-// const mapStateToProps = (state:rootState) => ({
-//   bannerList: state.home.bannerList
-// })
+const mapStateToProps = (state:rootState) => ({
+  bannersList: state.home.bannersList
+})
 
-// const mapDispatchToProps = (dispatch:Dispatch) => ({
-//   getBannerDataDispatch(id:number) {
-//     dispatch(getBannerList(id))
-//   }
-// })
+const mapDispatchToProps = (dispatch: any) => ({
+  getBannerDataDispatch() {
+    dispatch(getBannersList())
+  }
+})
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Home)
-export default Home
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
