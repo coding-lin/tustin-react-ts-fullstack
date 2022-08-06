@@ -1,15 +1,16 @@
-import { useState } from 'react'
+import { useState, Suspense } from 'react'
 import { GlobalStyle } from './style'
 import Footer from '@/components/Footer'
 import Routes from '@/routes'
-import './App.css'
 
 function App() {
 
   return (
     <div className="App">
       <GlobalStyle />
-      <Routes />
+      <Suspense fallback={<div>loading...</div>}>
+        <Routes />
+      </Suspense>
       <Footer />
     </div>
   )
