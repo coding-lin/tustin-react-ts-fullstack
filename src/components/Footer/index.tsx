@@ -2,9 +2,11 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { FooterWrapper } from './style'
 import classnames from 'classnames'
+import { isPath } from '@/utils' 
 
-export default function Footer() {
+const Footer = () => {
   const { pathname } = useLocation()
+  if (isPath(pathname)) return
 
   return (
     <FooterWrapper>
@@ -27,3 +29,5 @@ export default function Footer() {
     </FooterWrapper>
   )
 }
+
+export default Footer
