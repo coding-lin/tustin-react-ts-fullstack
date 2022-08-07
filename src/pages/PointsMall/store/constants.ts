@@ -1,0 +1,1 @@
+export const SET_COUPONS = 'SET_COUPONS'
