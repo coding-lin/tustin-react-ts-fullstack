@@ -2,7 +2,8 @@ import { AnyAction } from 'redux'
 import * as actionTypes from './constants'
 
 const initialState = {
-  bannersList2: []
+  bannersList2: [],
+  detailList: []
 }
 
 export default (state=initialState, action:AnyAction) => {
@@ -12,6 +13,13 @@ export default (state=initialState, action:AnyAction) => {
         ...state,
         bannersList2: action.data
       }
+    break;
+    case actionTypes.SET_DETAIL:
+      return {
+        ...state,
+        detailList: action.data
+      }
+    break;
     default:
       return state
   }

@@ -2,21 +2,25 @@ import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { rootState } from '@/store'
 import Slider from '@/components/slider2'
-import { getBannersList2 } from './store/actionCreators'
+import SaleDetail from '@/components/SaleDetail'
+import { getBannersList2, getDetailList } from './store/actionCreators'
 import { Wrapper, HeaderWrapper } from './style'
 
 interface FoodProps {
   bannersList2: any[];
+  detailList: any[];
   getBannerData2Dispatch: () => void;
+  getDetailDataDispatch: () => void;
 }
 
 const Food:React.FC<FoodProps> = (props) => {
-  const { bannersList2 } = props
-  console.log(bannersList2)
-  const { getBannerData2Dispatch } = props
+  const { bannersList2, detailList } = props
+  console.log(bannersList2, detailList)
+  const { getBannerData2Dispatch, getDetailDataDispatch } = props
 
   useEffect(() => {
-    getBannerData2Dispatch()
+    getBannerData2Dispatch(),
+    getDetailDataDispatch()
   }, [])
 
   return (
@@ -35,17 +39,22 @@ const Food:React.FC<FoodProps> = (props) => {
         </div>
       </HeaderWrapper>
       <Slider bannersList2={bannersList2}></Slider>
+      <SaleDetail detailList={detailList} />
     </Wrapper>
   )
 }
 
 const mapStateToProps = (state:rootState) => ({
-  bannersList2: state.food.bannersList2
+  bannersList2: state.food.bannersList2,
+  detailList: state.food.detailList
 })
 
 const mapDispatchToProps = (dispatch: any) => ({
   getBannerData2Dispatch() {
     dispatch(getBannersList2())
+  },
+  getDetailDataDispatch() {
+    dispatch(getDetailList())
   }
 })
 
