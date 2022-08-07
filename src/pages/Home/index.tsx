@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { rootState } from '@/store'
 import { getBannersList } from './store/actionCreators'
 import Slider from '@/components/slider'
@@ -69,7 +70,9 @@ const Home:React.FC<HomeProps> = (props) => {
         </div>
       </Container>
       <ImgWrapper>
-        <img src={ShoppingMall} />
+        <Link to="points-mall">
+          <img src={ShoppingMall} />
+        </Link> 
       </ImgWrapper>
     </Wrapper>
   )
