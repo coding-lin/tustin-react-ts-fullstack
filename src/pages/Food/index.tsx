@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { rootState } from '@/store'
 import Slider from '@/components/slider2'
 import SaleDetail from '@/components/SaleDetail'
@@ -14,6 +15,7 @@ interface FoodProps {
 }
 
 const Food:React.FC<FoodProps> = (props) => {
+  const navigate = useNavigate()
   const { bannersList2, detailList } = props
   const { getBannerData2Dispatch, getDetailDataDispatch } = props
 
@@ -26,8 +28,13 @@ const Food:React.FC<FoodProps> = (props) => {
     <Wrapper>
       <HeaderWrapper>
         <div className='sousuo'>
-          <input type="text" placeholder='搜索商品' />
-          <i className='iconfont icon-sousuo'></i>
+          <input type="text" placeholder='搜索商品'
+            onClick={() => navigate('/food-search')} 
+          />
+          <i 
+            className='iconfont icon-sousuo'
+            onClick={() => navigate('/food-search')}
+          ></i>
         </div>
         <div className='shop'>
           <h2>南昌市东华理工大学店</h2>
@@ -37,7 +44,7 @@ const Food:React.FC<FoodProps> = (props) => {
 
         </div>
       </HeaderWrapper>
-      <Slider bannersList2={bannersList2}></Slider>
+      <Slider bannersList2={bannersList2} />
       <SaleDetail detailList={detailList} />
     </Wrapper>
   )
