@@ -11,11 +11,11 @@ export const Wrapper = styled.div`
       display: flex;
       height: 100%;
       .sale-left {
-        overflow-y: auto;
-        width: ${px2rem(75)};
+        width: 20%;
         background: rgba(50, 50, 50, 0.08);
+        overflow-y: auto;
         -webkit-overflow-scrolling: touch;
-        padding-bottom: ${px2rem(61)};
+        padding-bottom: ${px2rem(60)};
         ul {
           flex: none;
           position: relative;
@@ -39,17 +39,16 @@ export const Wrapper = styled.div`
   .sale-detail-box {
     position: relative;
     height: 100%;
-    width: ${px2rem(300)};
+    width: 80%;
     .sale-detail {
       height: 100%;
-      padding-bottom: ${px2rem(61)};
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
   }
   .menu-box {
     height: 100%;
-    padding-bottom: ${px2rem(14)};
+    padding-bottom: ${px2rem(20)};
     overflow-y: auto;
     .menu-detail {
       margin-block-start: 0.25em;
@@ -86,16 +85,12 @@ export const Wrapper = styled.div`
       -webkit-flex: 1;
       flex: 1;
       position: relative;
-      padding-bottom: 0.666667rem;
-      padding-bottom: 6.666667vw;
-      padding-right: 0.4rem;
-      padding-right: 4vw;
+      padding-right: ${px2rem(14)};
+      padding-bottom: ${px2rem(25)};
       .food-name {
         position: relative;
         display: -webkit-flex;
         display: flex;
-        -webkit-align-items: start;
-        align-items: start;
         span {
           font-size: ${px2rem(15)};
           font-weight: 600;
@@ -107,6 +102,7 @@ export const Wrapper = styled.div`
         color: #999;
         font-size: ${px2rem(13)}; 
         margin-left: ${px2rem(2)};
+        margin-top: ${px2rem(8)};
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -114,7 +110,7 @@ export const Wrapper = styled.div`
         -webkit-box-orient: vertical;
       }
       .food_price {
-        font-size: ${px2rem(16)};
+        font-size: ${px2rem(18)};
         font-weight: 600;
         padding-bottom: ${px2rem(4)};
         position: absolute;
@@ -140,8 +136,8 @@ export const Wrapper = styled.div`
     }
   }
   .img-box {
-    width: ${px2rem(95)};
-    height: ${px2rem(94)};
+    width: ${px2rem(92)};
+    height: ${px2rem(90)};
     margin-right: ${px2rem(4)};
     position: relative;
   }
@@ -149,5 +145,4 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-  // footer
 `
