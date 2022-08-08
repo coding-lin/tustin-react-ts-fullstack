@@ -1,93 +1,72 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import { px2rem } from "@/assets/global-style"
+
 export const Wrapper = styled.div`
   .sale-box {
     height: 550px;
-    // overflow: hidden;
-    padding-bottom: 1.28rem;
-    padding-bottom: 12.8vw;
-    background-color: #fff;
-    background: #fff !important;
+    padding-bottom: ${px2rem(61)};
+    background-color: #fff !important;
     .sale-main {
       display: -webkit-flex;
       display: flex;
       height: 100%;
       .sale-left {
         overflow-y: auto;
-        height: 100%;
-        background-color: #f8f8f8;
+        width: ${px2rem(75)};
+        background: rgba(50, 50, 50, 0.08);
         -webkit-overflow-scrolling: touch;
-        padding-bottom: 1.066667rem;
-        padding-bottom: 10.666667vw;
+        padding-bottom: ${px2rem(61)};
         ul {
           flex: none;
           position: relative;
-          z-index: 0;
-          list-style: none;
           a {
             display: block;
             position: relative;
-            padding: 0.466667rem 0.2rem;
-            padding: 4.666667vw 2vw;
-            font-size: 0.128rem;
-            color: #333;
-            background-color: #fff;
+            text-align: center;
+            padding: ${px2rem(18)} ${px2rem(10)};
             span {
-              font-size: 0.128rem;
+              font-size: ${px2rem(12)};
               color: #000;
             }
+          }
+          a:hover {
+            background: #fff;
           }
         }
       }
     }
   }
-
   .sale-detail-box {
     position: relative;
     height: 100%;
-    width: 3.18rem;
-    // width: 31.8vw;
+    width: ${px2rem(300)};
     .sale-detail {
       height: 100%;
-      padding-bottom: 0.424rem;
-      padding-bottom: 4.24vw;
+      padding-bottom: ${px2rem(61)};
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
     }
   }
   .menu-box {
     height: 100%;
-    padding-bottom: 0.424rem;
-    padding-bottom: 4.24vw;
+    padding-bottom: ${px2rem(14)};
     overflow-y: auto;
     .menu-detail {
-      margin: 0;
-      padding: 0;
-      display: block;
       margin-block-start: 0.25em;
       margin-block-end: 0.25em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
     }
   }
   .menu-top {
     position: relative;
-    margin-left: 0.1rem;
-    margin-left: 1vw;
-    padding: 0.08rem 0.32rem 0.08rem 0;
-    padding: 0.8vw 0.32vw 0.8vw 0;
+    padding: ${px2rem(4)};
     display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     align-items: center;
     overflow: hidden;
     .top-title {
-      margin-right: 0.05rem;
-      margin-right: 0.5vw;
-      font-weight: 700;
-      font-size: 0.128rem;
-      color: #666;
-      -webkit-flex: none;
-      flex: none;
+      font-size: ${px2rem(16)};
+      font-weight: 600;
     }
     span {
       display: block;
@@ -111,74 +90,49 @@ export const Wrapper = styled.div`
       padding-bottom: 6.666667vw;
       padding-right: 0.4rem;
       padding-right: 4vw;
-      .fooddetail-info {
+      .food-name {
         position: relative;
-        padding-right: 0.4rem;
-        padding-right: 4vw;
         display: -webkit-flex;
         display: flex;
         -webkit-align-items: start;
         align-items: start;
         span {
-          font-weight: 700;
-          overflow: hidden;
-          font-size: 0.14rem;
+          font-size: ${px2rem(15)};
+          font-weight: 600;
+          padding: ${px2rem(4)};
           white-space: nowrap;
-          width: 1.6rem;
-          width: 16vw;
-          text-overflow: ellipsis;
         }
       }
-      .fooddetail-sale {
-        margin: 0.173333rem 0 !important;
-        margin: 1.733333vw 0 !important;
+      .food-info {
         color: #999;
-        font-size: 0.1rem;
-        line-height: 1;
-        min-height: 1em;
-        span:nth-of-type(1) {
-          vertical-align: middle;
-        }
-        span:nth-of-type(2) {
-          margin-left: 1.066667vw;
-          vertical-align: middle;
-        }
+        font-size: ${px2rem(13)}; 
+        margin-left: ${px2rem(2)};
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
       }
-      .fooddetail-sale {
-        display: flex;
-      }
-      .sale_price {
-        font-size: 0.16rem;
-        line-height: 0.426667rem;
-        line-height: 4.266667vw;
-        color: #ff5339;
-        padding-bottom: 0.093333rem;
-        padding-bottom: 0.933333vw;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: baseline;
-        align-items: baseline;
+      .food_price {
+        font-size: ${px2rem(16)};
+        font-weight: 600;
+        padding-bottom: ${px2rem(4)};
         position: absolute;
         bottom: 0;
-        span {
-          margin-right: 0.266667vw;
-        }
       }
       .food-btn {
         position: absolute;
-        right: 0.4rem;
-        right: 4vw;
-        bottom: 0.066667rem;
-        bottom: 0.666667vw;
+        right: ${px2rem(8)};
+        bottom: ${px2rem(4)};
         span {
           display: inline-flex;
-          font-size: 0.18rem;
-          width: 0.2rem;
-          height: 0.2rem;
+          font-size: ${px2rem(20)};
+          width: ${px2rem(20)};
+          height: ${px2rem(20)};
           -webkit-align-items: center;
           align-items: center;
           justify-content: center;
-          background: rgb(35, 149, 255);
+          background: red;
           border-radius: 50%;
           color: #fff;
         }
@@ -186,112 +140,14 @@ export const Wrapper = styled.div`
     }
   }
   .img-box {
-    width: 2.533333rem;
-    width: 25.333333vw;
-    height: 2.8rem !important;
-    height: 28vw !important;
-    -webkit-flex: none;
-    flex: none;
-    margin-right: 0.266667rem;
-    margin-right: 2.666667vw;
+    width: ${px2rem(95)};
+    height: ${px2rem(94)};
+    margin-right: ${px2rem(4)};
     position: relative;
   }
   .sale-img {
     width: 100%;
-    border-radius: 0.053333rem;
-    border-radius: 0.533333vw;
+    height: 100%;
   }
-  //footer
-  .footer-box {
-    z-index: 11;
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    align-items: center;
-    padding-left: 2.106667rem;
-    padding-left: 21.066667vw;
-    background-color: rgba(61, 61, 63, 0.9);
-    -webkit-backdrop-filter: blur(0.266667rem);
-    -webkit-backdrop-filter: blur(2.666667vw);
-    height: 1.28rem;
-    height: 12.8vw;
-    a {
-      text-decoration: none;
-      height: 100%;
-      width: 2.8rem;
-      width: 28vw;
-      color: #fff;
-      text-align: center;
-      text-decoration: none;
-      font-size: 0.2rem;
-      font-weight: 700;
-      -webkit-user-select: none;
-      user-select: none;
-      line-height: 1.28rem;
-      line-height: 12.8vw;
-    }
-  }
-  .footer-text {
-    flex: 1;
-    p:nth-of-type(1) {
-      font-size: 0.2rem;
-      line-height: normal;
-      color: #fff;
-      margin: 0;
-      font-weight: 400;
-      span {
-        font-size: 0.7em;
-        color: #999;
-      }
-    }
-    p:nth-of-type(2) {
-      color: #999;
-      font-size: 0.1rem;
-      margin: 0;
-      font-weight: 400;
-    }
-  }
-  .detail-send {
-    color: #fff;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.16rem;
-    font-weight: 700;
-    -webkit-user-select: none;
-    user-select: none;
-    line-height: 1.28rem;
-    line-height: 12.8vw;
-  }
-  .footer-top {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    transition: -webkit-transform 0.3s ease;
-    transition: transform 0.3s ease;
-    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-    -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
-    bottom: 1.8rem;
-    bottom: 18vw;
-    z-index: 11;
-    section {
-      background-color: #fffad6;
-      border-top: 0.013333rem solid #f9e8a3;
-      border-top: 0.133333vw solid #f9e8a3;
-      opacity: 0.96;
-      line-height: 0.533333rem;
-      line-height: 5.333333vw;
-      font-size: 0.1rem;
-      text-align: center;
-      span {
-        color: #333333;
-      }
-    }
-  }
-`;
+  // footer
+`

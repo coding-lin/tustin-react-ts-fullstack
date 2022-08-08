@@ -17,6 +17,7 @@ const SaleDetail: React.FC<DetailProps> = (props) => {
       </div>
     ))
   }
+
   const scrollToAnchor = (anchorName: any) => {
     if (anchorName) {
       let anchorElement = document.getElementById(anchorName)
@@ -28,54 +29,51 @@ const SaleDetail: React.FC<DetailProps> = (props) => {
       }
     }
   }
-  // const renderSaleSlide = () => {
-  //   return detailList.map((item, index) => {
-  //     return (
-  //       <div className="menu-box-detail" key={item.id}>
-  //         <div className="menu-top">
-  //           <div className="top-title" id={item.id}>
-  //             {item.name}
-  //           </div>
-  //           <span>{item.description}</span>
-  //         </div>
-  //         <div className="menu-box">
-  //           {
-  //             item.foods.map((element, index) => {
-  //               return (
-  //                 <div key={index}className="menu-detail" >
-  //                   <div className="menu-detail-box">
-  //                     <div className="menu-item" key={index}>
-  //                       <div className="img-box">
-  //                         <img className="sale-img" src={item.img}  alt=""/>
-  //                       </div>
-  //                       <section>
-  //                         <p className="fooddetail-info">
-  //                           <span>{element.name}</span>
-  //                         </p>
-  //                         <p className="fooddetail-sale">
-  //                           <span>月售{element.month_sales}份</span>
-  //                           <span>好评率100%</span>
-  //                         </p>
-  //                         <div className="fooddetails-space">
-  //                         </div>
-  //                         <span className="sale_price">
-  //                           <span>￥{element.lowest_price}</span>
-  //                         </span>
-  //                         <div className="food-btn">
-  //                           <span>+</span>
-  //                         </div>
-  //                       </section>
-  //                     </div>
-  //                   </div>
-  //                 </div>   
-  //               )
-  //             })
-  //           }
-  //         </div>
-  //       </div>
-  //     )
-  //   })
-  // }
+
+  const renderSaleSlide = () => {
+    return detailList.map((item) => {
+      return (
+        <div className="menu-box-detail" key={item.id}>
+          <div className="menu-top">
+            <div className="top-title" id={item.id}>
+              {item.name}
+            </div>
+          </div>
+          <div className="menu-box">
+            {
+              item.foods.map((element: any) => {
+                return (
+                  <div key={element.id} className="menu-detail" >
+                    <div className="menu-detail-box">
+                      <div className="menu-item" key={element.id}>
+                        <div className="img-box">
+                          <img className="sale-img" src={element.img} />
+                        </div>
+                        <section>
+                          <p className="food-name">
+                            <span>{element.name}</span>
+                          </p>
+                          <p className="food-info">
+                            <span>{element.info}</span>
+                          </p>
+                          <span className="food_price">
+                            <span>￥{element.price}</span>
+                          </span>
+                          <div className="food-btn">
+                            <span>+</span>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </div>   
+                )
+              })
+            }
+          </div>
+        </div>
+      )
+    })
+  }
 
   return (
     <Wrapper>
@@ -83,14 +81,14 @@ const SaleDetail: React.FC<DetailProps> = (props) => {
         <div className="sale-main">
           <div className="sale-left">
             <ul>
-              {renderInfo()}
+              { renderInfo() }
             </ul>
           </div>
-          {/* <div className="sale-detail-box">
+          <div className="sale-detail-box">
             <div className="sale-detail">
-              {renderSaleSlide()}
+              { renderSaleSlide() }
             </div>
-          </div> */}
+          </div>
         </div>
       </div>
     </Wrapper>
