@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { rootState } from '@/store'
 import { getBannersList } from './store/actionCreators'
 import Slider from '@/components/slider'
@@ -20,9 +20,13 @@ interface HomeProps {
 }
 
 const Home:React.FC<HomeProps> = (props) => {
+  const navigate = useNavigate()
   const { bannersList } = props
-  console.log(bannersList)
   const { getBannerDataDispatch } = props
+
+  useEffect(() => {
+    navigate('/')
+  }, [])
 
   useEffect(() => {
     getBannerDataDispatch()
