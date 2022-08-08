@@ -15,7 +15,6 @@ interface FoodProps {
 
 const Food:React.FC<FoodProps> = (props) => {
   const { bannersList2, detailList } = props
-  console.log(bannersList2, detailList)
   const { getBannerData2Dispatch, getDetailDataDispatch } = props
 
   useEffect(() => {
