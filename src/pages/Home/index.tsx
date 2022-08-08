@@ -36,12 +36,12 @@ const Home:React.FC<HomeProps> = (props) => {
     <Wrapper>
       <Slider bannersList={bannersList}></Slider>
       <HeaderWrapper>
-        <div>
+        <div onClick={() => navigate('food')}>
           <img src={HallFood} />
           <p>堂食</p>
           <span>到店就餐</span>
         </div>
-        <div>
+        <div onClick={() => navigate('food')}>
           <img src={Pack} />
           <p>兜走</p>
           <span>打包自提</span>
