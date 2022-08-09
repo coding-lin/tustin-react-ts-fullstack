@@ -55,3 +55,8 @@ export const HeaderWrapper = styled.div`
     }
   }
 `
+
+export const SliderWrapper = styled.div`
+  width: 100;
+  background: #fff;
+`

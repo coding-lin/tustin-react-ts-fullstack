@@ -5,7 +5,7 @@ import { rootState } from '@/store'
 import Slider from '@/components/slider2'
 import SaleDetail from '@/components/SaleDetail'
 import { getBannersList2, getDetailList } from './store/actionCreators'
-import { Wrapper, HeaderWrapper } from './style'
+import { Wrapper, HeaderWrapper, SliderWrapper } from './style'
 
 interface FoodProps {
   bannersList2: any[];
@@ -44,7 +44,9 @@ const Food:React.FC<FoodProps> = (props) => {
 
         </div>
       </HeaderWrapper>
-      <Slider bannersList2={bannersList2} />
+      <SliderWrapper>
+        <Slider bannersList2={bannersList2} />
+      </SliderWrapper>
       <SaleDetail detailList={detailList} />
     </Wrapper>
   )
