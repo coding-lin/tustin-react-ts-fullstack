@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Empty from '@/assets/images/empty.png'
 import { OrderWrapper, TabWrapper, Container } from './style'
 
 const Order = () => {
+  const navigate = useNavigate()
   const [tab, setTab] = useState('当前订单')
 
   const changeTab = (target:string) => {
@@ -21,28 +23,30 @@ const Order = () => {
   const HisOrder = () => {
     return (
       <div className='history-order'>
-        <div className="header">
-          <div className='address'>
-            <h2>南昌市东华理工大学店</h2>
+        <div onClick={() => navigate('/order-detail')}>
+          <div className="header">
+            <div className='address'>
+              <h2>南昌市东华理工大学店</h2>
+            </div>
+            <div className="finished">
+              <span>已完成</span>
+              <i className='iconfont icon-xiangyoujiantou'></i>
+            </div>
           </div>
-          <div className="finished">
-            <span>已完成</span>
-            <i className='iconfont icon-xiangyoujiantou'></i>
+          <div className="time">
+            <span>2022-07-12 12:35:26</span>
+          </div>
+          <div className="info">
+            <div className='image'>
+              <img src="https://img-blog.csdnimg.cn/b9bc32f3497f4b7ca4eda0afd2128095.png" width="100%" height="100%" />
+            </div>
+            <div className="price">
+              <span>¥19</span>
+              <span>共2件</span>
+            </div>
           </div>
         </div>
-        <div className="time">
-          <span>2022-07-12 12:35:26</span>
-        </div>
-        <div className="info">
-          <div className='image'>
-            <img src="https://img-blog.csdnimg.cn/b9bc32f3497f4b7ca4eda0afd2128095.png" width="100%" height="100%" />
-          </div>
-          <div className="price">
-            <span>¥19</span>
-            <span>共2件</span>
-          </div>
-        </div>
-        <button>再来一单</button>
+        <button onClick={() => navigate('/food')}>再来一单</button>
       </div>
     )
   }
