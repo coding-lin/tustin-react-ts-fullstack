@@ -5,7 +5,6 @@ export const SliderContainer = styled.div`
   width: 100%;
   margin-top: ${px2rem(114)};
   height: ${px2rem(130)};
-  background: #fff;
   .slider-container {
     position: relative;
     width: 90%;
