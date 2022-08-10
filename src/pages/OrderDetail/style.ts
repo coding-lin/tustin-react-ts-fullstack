@@ -63,7 +63,7 @@ export const FoodWrapper = styled.div`
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-  height: ${px2rem(258)};
+  height: ${px2rem(260)};
   border-radius: ${px2rem(10)};
   background: #fff;
   .header {
@@ -113,10 +113,10 @@ export const FoodWrapper = styled.div`
       margin-top: ${px2rem(10)};
       margin-left: ${px2rem(6)};
       h2 {
-        font-size: ${px2rem(16)};
+        font-size: ${px2rem(15)};
       }
       span {
-        font-size: ${px2rem(14)};
+        font-size: ${px2rem(13)};
         color: #999;
       }
     }
@@ -137,7 +137,7 @@ export const FoodWrapper = styled.div`
       top: ${px2rem(50)};
       right: ${px2rem(20)};
       span {
-        font-size: ${px2rem(16)};
+        font-size: ${px2rem(15)};
         font-weight: 600;
       }
     }
@@ -152,6 +152,7 @@ export const FoodWrapper = styled.div`
       margin-left: ${px2rem(16)};
     }
     span {
+      font-size: ${px2rem(15)};
       font-weight: 600;
       margin-right: ${px2rem(20)};
     }
@@ -165,12 +166,15 @@ export const FoodWrapper = styled.div`
     background: rgba(50, 50, 50, 0.1);
   }
   .footer {
-    margin-left: 50%;
+    display: inline-block;
+    height: ${px2rem(26)};
+    margin-top: ${px2rem(2)} 0;
+    margin-left: ${px2rem(174)};
     >span:first-child {
-      font-size: ${px2rem(14)};
+      font-size: ${px2rem(13)};
     }
     >span:nth-child(2) {
-      font-size: ${px2rem(18)};
+      font-size: ${px2rem(17)};
       font-weight: 600;
     }
   }
@@ -180,6 +184,7 @@ export const FoodWrapper = styled.div`
     width: 92%;
     height: ${px2rem(1)};
     left: ${px2rem(12)};
+    bottom: ${px2rem(28)};
     background: rgba(50, 50, 50, 0.1);
   }
 `
