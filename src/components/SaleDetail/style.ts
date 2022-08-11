@@ -109,7 +109,7 @@ export const Wrapper = styled.div`
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
       }
-      .food_price {
+      .food-price {
         font-size: ${px2rem(18)};
         font-weight: 600;
         padding-bottom: ${px2rem(4)};

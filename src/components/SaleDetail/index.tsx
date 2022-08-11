@@ -56,7 +56,7 @@ const SaleDetail: React.FC<DetailProps> = (props) => {
                           <p className="food-info">
                             <span>{element.info}</span>
                           </p>
-                          <span className="food_price">
+                          <span className="food-price">
                             <span>￥{element.price}</span>
                           </span>
                           <div className="food-btn">
