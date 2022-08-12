@@ -10,7 +10,7 @@ const Mine = lazy(() => import('@/pages/Mine'))  // 我的页面
 
 const RouterConfig = () => {
   return (
-    <Suspense fallback={<div>loading...</div>}>
+    <Suspense fallback={null}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/points-mall" element={<PointsMall />} />
