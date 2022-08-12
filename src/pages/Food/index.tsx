@@ -4,10 +4,12 @@ import { useNavigate } from 'react-router-dom'
 import { rootState } from '@/store'
 import Slider from '@/components/slider2'
 import SaleDetail from '@/components/SaleDetail'
+import Loading from '@/components/common/loading'
 import { getBannersList2, getDetailList } from './store/actionCreators'
 import { Wrapper, HeaderWrapper, SliderWrapper } from './style'
 
 interface FoodProps {
+  enterLoading: boolean;
   bannersList2: any[];
   detailList: any[];
   getBannerData2Dispatch: () => void;
@@ -16,7 +18,7 @@ interface FoodProps {
 
 const Food:React.FC<FoodProps> = (props) => {
   const navigate = useNavigate()
-  const { bannersList2, detailList } = props
+  const { enterLoading, bannersList2, detailList } = props
   const { getBannerData2Dispatch, getDetailDataDispatch } = props
 
   useEffect(() => {
@@ -47,12 +49,13 @@ const Food:React.FC<FoodProps> = (props) => {
       <SliderWrapper>
         <Slider bannersList2={bannersList2} />
       </SliderWrapper>
-      <SaleDetail detailList={detailList} />
+      { enterLoading ? <Loading /> : <SaleDetail detailList={detailList} /> }
     </Wrapper>
   )
 }
 
 const mapStateToProps = (state:rootState) => ({
+  enterLoading: state.food.enterLoading,
   bannersList2: state.food.bannersList2,
   detailList: state.food.detailList
 })
@@ -66,4 +69,4 @@ const mapDispatchToProps = (dispatch: any) => ({
   }
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Food)
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Food))

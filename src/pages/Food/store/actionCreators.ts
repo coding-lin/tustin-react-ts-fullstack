@@ -7,6 +7,16 @@ const setBannersList2 = (data: any[]) => ({
   data
 })
 
+const setDetail = (data: any[]) => ({
+  type: actionTypes.SET_DETAIL,
+  data
+})
+
+const changeLoading = (data: boolean) => ({
+  type: actionTypes.CHANGE_FOOD_LOADING,
+  data
+})
+
 export const getBannersList2 = () => {
   return (dispatch: Dispatch) => {
     getBannersList2Request()
@@ -17,17 +27,13 @@ export const getBannersList2 = () => {
   }
 }
 
-const setDetail = (data: any[]) => ({
-  type: actionTypes.SET_DETAIL,
-  data
-})
-
 export const getDetailList = () => {
   return (dispatch: Dispatch) => {
     getDetailRequest()
       .then(data => {
         const action = setDetail(data.data)
         dispatch(action)
+        dispatch(changeLoading(false))
       })
   }
 }

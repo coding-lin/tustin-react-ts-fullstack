@@ -3,11 +3,18 @@ import * as actionTypes from './constants'
 
 const initialState = {
   bannersList2: [],
-  detailList: []
+  detailList: [],
+  enterLoading: true
 }
 
 export default (state=initialState, action:AnyAction) => {
   switch(action.type) {
+    case actionTypes.CHANGE_FOOD_LOADING:
+      return {
+        ...state,
+        enterLoading: action.data
+      }
+    break;
     case actionTypes.SET_BANNERS2:
       return {
         ...state,
