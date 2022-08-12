@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom'
 import { rootState } from '@/store'
 import { getBannersList } from './store/actionCreators'
 import Slider from '@/components/slider'
+import Loading from '@/components/common/loading'
 import HallFood from '@/assets/images/hall-food.png'
 import Pack from '@/assets/images/pack.png'
 import Img1 from '@/assets/images/1.jpg'
@@ -16,12 +17,13 @@ import { Wrapper, HeaderWrapper, QRWrapper, Container, ImgWrapper } from './styl
 
 interface HomeProps {
   bannersList: any[];
+  enterLoading: boolean;
   getBannerDataDispatch: () => void;
 }
 
 const Home:React.FC<HomeProps> = (props) => {
   const navigate = useNavigate()
-  const { bannersList } = props
+  const { enterLoading, bannersList } = props
   const { getBannerDataDispatch } = props
 
   useEffect(() => {
@@ -34,7 +36,7 @@ const Home:React.FC<HomeProps> = (props) => {
 
   return (
     <Wrapper>
-      <Slider bannersList={bannersList}></Slider>
+      { enterLoading ? <Loading /> : <Slider bannersList={bannersList}></Slider>}
       <HeaderWrapper>
         <div onClick={() => navigate('food')}>
           <img src={HallFood} />
@@ -83,6 +85,7 @@ const Home:React.FC<HomeProps> = (props) => {
 }
 
 const mapStateToProps = (state:rootState) => ({
+  enterLoading: state.home.enterLoading,
   bannersList: state.home.bannersList
 })
 

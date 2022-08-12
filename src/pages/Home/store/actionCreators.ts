@@ -7,12 +7,18 @@ const setBannersList = (data: any[]) => ({
   data
 })
 
+const changeLoading = (data: boolean) => ({
+  type: actionTypes.CHANGE_HOME_LOADING,
+  data
+})
+
 export const getBannersList = () => {
   return (dispatch: Dispatch) => {
     getBannersListRequest()
       .then(data => {
         const action = setBannersList(data.data)
         dispatch(action)
+        dispatch(changeLoading(false))
       })
   }
 }
