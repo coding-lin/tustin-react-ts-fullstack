@@ -11,7 +11,7 @@ export const ImgWrapper = styled.div`
   width: 100%;
   img {
     width: 100%;
-    height: ${px2rem(200)};
+    height: ${px2rem(178)};
   }
 `
 
@@ -21,11 +21,11 @@ export const InfoWrapper = styled.div`
   background: rgba(50, 50, 50, 0.1);
   color: #fff;
   position: absolute;
-  top: ${px2rem(118)};
+  top: ${px2rem(96)};
   h2 {
     font-size: ${px2rem(20)};
     margin-left: ${px2rem(20)};
-    margin-top: ${px2rem(8)};
+    margin-top: ${px2rem(10)};
     padding: ${px2rem(1)};
   }
   span {
@@ -41,7 +41,7 @@ export const VipWrapper = styled.div`
   position: absolute;
   border-radius: ${px2rem(10)};
   background: #fff;
-  top: ${px2rem(182)};
+  top: ${px2rem(158)};
   left: 5%;
   .tx {
     img {
@@ -124,7 +124,7 @@ export const List = styled.ul`
   width: 90%;
   height: ${px2rem(424)};
   background: #fff;
-  margin-top: ${px2rem(180)};
+  margin-top: ${px2rem(178)};
   margin-left: auto;
   margin-right: auto;
   border-radius: ${px2rem(10)};
