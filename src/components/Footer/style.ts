@@ -20,10 +20,14 @@ export const FooterWrapper = styled.div`
     justify-content: space-around;
     color: #000;
     &.active {
-      color: orange;
+      color: #FFCC22;
     }
     i {
       font-size: ${px2rem(32)};
+    }
+    img {
+      width: ${px2rem(30)};
+      height: ${px2rem(30)};
     }
     span {
       font-size: ${px2rem(14)};
