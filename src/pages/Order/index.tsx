@@ -38,7 +38,7 @@ const Order = () => {
           </div>
           <div className="info">
             <div className='image'>
-              <img src="https://img-blog.csdnimg.cn/b9bc32f3497f4b7ca4eda0afd2128095.png" width="100%" height="100%" />
+              <img src="https://s2.xptou.com/2023/03/10/640ab8b7dc606.png" width="100%" height="100%" />
             </div>
             <div className="price">
               <span>¥19</span>

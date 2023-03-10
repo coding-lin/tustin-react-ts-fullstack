@@ -32,7 +32,7 @@ const OrderDetail:React.FC<OrderDetailProps> = (props) => {
         </div>
         <div className="food">
           <div className='img'>
-            <img src="https://img-blog.csdnimg.cn/80f1cc5ff6574e0496c0783893675a70.png" width='100%' height='100%'/>
+            <img src="https://s2.xptou.com/2023/03/10/640ab909cbcda.png" width='100%' height='100%'/>
           </div>
           <div className='info'>
             <h2>冰柠可乐</h2>
@@ -44,7 +44,7 @@ const OrderDetail:React.FC<OrderDetailProps> = (props) => {
         </div>
         <div className="food">
           <div className="img">
-            <img src="https://img-blog.csdnimg.cn/c1f2a08bdb464075b272ca4ba3c67742.png" width='100%' height='100%'/>
+            <img src="https://s2.xptou.com/2023/03/10/640ab92aacb80.png" width='100%' height='100%'/>
           </div>
           <div className='info'>
             <h2>好食成双-香辣鸡腿堡</h2>
