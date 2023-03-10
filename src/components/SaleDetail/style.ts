@@ -118,18 +118,18 @@ export const Wrapper = styled.div`
       }
       .food-btn {
         position: absolute;
+        display: flex;
         right: ${px2rem(8)};
         bottom: ${px2rem(4)};
         span {
-          display: inline-flex;
-          font-size: ${px2rem(20)};
+          font-size: ${px2rem(18)};
           width: ${px2rem(20)};
           height: ${px2rem(20)};
-          -webkit-align-items: center;
+          border-radius: 50%;
+          text-align: center;
           align-items: center;
           justify-content: center;
           background: red;
-          border-radius: 50%;
           color: #fff;
         }
       }
